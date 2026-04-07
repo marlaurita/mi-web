@@ -1,0 +1,120 @@
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  border-top: 1px solid var(--color-borderSubtle);
+  padding: 60px 24px 32px;
+  background: rgba(10, 12, 30, 0.50);
+}
+
+.footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+/* Brand */
+.footer__brand-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.footer__tagline {
+  color: var(--color-textMuted);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  max-width: 260px;
+}
+
+.footer__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.footer__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-cyan);
+  box-shadow: 0 0 10px var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.footer__status-text {
+  font-size: 0.8rem;
+  color: var(--color-textMuted);
+}
+
+/* Nav */
+.footer__col-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-textMuted);
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.footer__nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__nav-btn,
+.footer__legal-link {
+  color: var(--color-textSecondary);
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.footer__nav-btn:hover,
+.footer__legal-link:hover {
+  color: var(--color-cyan);
+}
+
+.footer__legal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Bottom bar */
+.footer__bottom {
+  padding-top: 24px;
+  border-top: 1px solid var(--color-borderSubtle);
+  display: flex;
+  justify-content: center;
+}
+
+.footer__copyright {
+  color: var(--color-textMuted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

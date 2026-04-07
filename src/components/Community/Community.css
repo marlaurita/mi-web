@@ -1,0 +1,125 @@
+/* ============================================================
+   COMMUNITY
+   ============================================================ */
+
+.community {
+  padding: 100px 24px;
+  background: linear-gradient(180deg, transparent, rgba(24, 79, 103, 0.08), transparent);
+}
+
+.community__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.community__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.community__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-top: 16px;
+  margin-bottom: 14px;
+  color: var(--color-textPrimary);
+}
+
+.community__description {
+  color: var(--color-textSecondary);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Grid */
+.community__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.community-card {
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  background: var(--color-bgCard);
+  border: 1px solid var(--color-borderSubtle);
+  transition: border-color 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.community-card:hover {
+  border-color: var(--color-borderAccent);
+  transform: translateY(-3px);
+}
+
+.community-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(102, 230, 221, 0.08);
+  border: 1px solid rgba(102, 230, 221, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.community-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.community-card__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-textPrimary);
+}
+
+.community-card__role {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-purple);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.community-card__description {
+  color: var(--color-textSecondary);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.community-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-cyan);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: gap 0.2s;
+}
+
+.community-card__link:hover {
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .community__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .community__grid {
+    grid-template-columns: 1fr;
+  }
+}

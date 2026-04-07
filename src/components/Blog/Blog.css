@@ -1,0 +1,179 @@
+/* ============================================================
+   BLOG
+   ============================================================ */
+
+.blog {
+  padding: 100px 24px;
+  position: relative;
+}
+
+.blog__bg-blob {
+  position: absolute;
+  top: 20%;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(154, 97, 141, 0.08) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.blog__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.blog__header-left {
+  flex: 1;
+}
+
+.blog__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-top: 16px;
+  color: var(--color-textPrimary);
+}
+
+.blog__description {
+  color: var(--color-textSecondary);
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.blog__cta-btn {
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-borderSubtle);
+  color: var(--color-textSecondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.blog__cta-btn:hover {
+  border-color: var(--color-borderAccent);
+  color: var(--color-cyan);
+}
+
+/* Grid */
+.blog__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Post card */
+.post-card {
+  border-radius: var(--radius-lg);
+  background: var(--color-bgCard);
+  border: 1px solid var(--color-borderSubtle);
+  padding: 28px;
+  cursor: default;
+  transition: border-color 0.3s, transform 0.3s, background 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.post-card--linked {
+  cursor: pointer;
+}
+
+.post-card:hover {
+  border-color: var(--color-borderAccent);
+  transform: translateY(-3px);
+  background: var(--color-bgCardHover);
+}
+
+.post-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Tags */
+.post-tag {
+  padding: 3px 10px;
+  border-radius: var(--radius-xl);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.post-tag--career {
+  background: rgba(240, 184, 16, 0.12);
+  color: var(--color-gold);
+}
+
+.post-tag--mentoring {
+  background: rgba(102, 230, 221, 0.10);
+  color: var(--color-cyan);
+}
+
+.post-tag--community {
+  background: rgba(154, 97, 141, 0.15);
+  color: var(--color-purple);
+}
+
+.post-card__date {
+  color: var(--color-textMuted);
+  font-size: 0.75rem;
+}
+
+.post-card__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-textPrimary);
+  line-height: 1.35;
+  flex-grow: 1;
+}
+
+.post-card__excerpt {
+  color: var(--color-textSecondary);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.post-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.post-card__read-link {
+  color: var(--color-cyan);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.post-card__read-time {
+  color: var(--color-textMuted);
+  font-size: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog__grid {
+    grid-template-columns: 1fr;
+  }
+}

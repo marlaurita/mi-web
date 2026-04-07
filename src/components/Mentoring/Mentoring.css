@@ -1,0 +1,213 @@
+/* ============================================================
+   MENTORING
+   ============================================================ */
+
+.mentoring {
+  padding: 100px 24px;
+  background: linear-gradient(180deg, transparent, rgba(24, 79, 103, 0.10), transparent);
+  position: relative;
+}
+
+.mentoring__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mentoring__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.mentoring__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: var(--color-textPrimary);
+}
+
+.mentoring__description {
+  color: var(--color-textSecondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Plans grid */
+.mentoring__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Plan card */
+.plan-card {
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  background: var(--color-bgCard);
+  border: 1px solid var(--color-borderSubtle);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.30);
+}
+
+.plan-card--highlighted {
+  background: linear-gradient(145deg, rgba(24, 79, 103, 0.70), rgba(31, 36, 74, 0.90));
+  border-color: rgba(102, 230, 221, 0.35);
+  box-shadow: 0 0 40px rgba(102, 230, 221, 0.08);
+}
+
+.plan-card--highlighted:hover {
+  box-shadow: 0 12px 60px rgba(102, 230, 221, 0.15);
+}
+
+/* Badge "Más popular" */
+.plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 16px;
+  border-radius: var(--radius-xl);
+  background: var(--color-cyan);
+  color: var(--color-navy);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.plan-card__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-textPrimary);
+  margin-bottom: 8px;
+}
+
+.plan-card--highlighted .plan-card__name {
+  color: var(--color-cyan);
+}
+
+.plan-card__price {
+  margin-bottom: 16px;
+}
+
+.plan-card__price-value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-textPrimary);
+}
+
+.plan-card__price-period {
+  color: var(--color-textMuted);
+  font-size: 0.9rem;
+}
+
+.plan-card__description {
+  color: var(--color-textSecondary);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+/* Features */
+.plan-card__features {
+  list-style: none;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plan-card__feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--color-textSecondary);
+}
+
+.plan-card__feature-check {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(102, 230, 221, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  color: var(--color-cyan);
+}
+
+/* CTA */
+.plan-card__cta {
+  width: 100%;
+  padding: 13px;
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: 1px solid rgba(102, 230, 221, 0.30);
+  color: var(--color-cyan);
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: var(--font-heading);
+  transition: opacity 0.2s;
+}
+
+.plan-card__cta:hover {
+  opacity: 0.85;
+}
+
+.plan-card--highlighted .plan-card__cta {
+  background: var(--color-cyan);
+  border: none;
+  color: var(--color-navy);
+}
+
+/* Nota inferior */
+.mentoring__note {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: rgba(240, 184, 16, 0.05);
+  border: 1px solid rgba(240, 184, 16, 0.15);
+}
+
+.mentoring__note-text {
+  color: var(--color-textSecondary);
+  font-size: 0.9rem;
+}
+
+.mentoring__note-cta {
+  color: var(--color-gold);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.mentoring__note-cta:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mentoring__plans {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}

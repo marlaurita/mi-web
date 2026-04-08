@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageContext'
 import Navbar from '../../components/Navbar/Navbar'
@@ -41,6 +42,10 @@ export default function BlogPost() {
   const { blog } = content
 
   const post = blog.posts.find((p) => p.slug === slug)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [slug])
 
   return (
     <>

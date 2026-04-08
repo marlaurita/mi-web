@@ -24,6 +24,7 @@ export default function Navbar() {
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <nav className="navbar__inner">
         <button className="navbar__logo" onClick={() => handleNav('hero')}>
+          <img src="/favicon.svg" alt="logo" className="navbar__logo-icon" />
           {site.name}
         </button>
 

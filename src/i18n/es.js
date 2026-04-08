@@ -120,7 +120,7 @@ export default {
     posts: [
       {
         tagKey:   'mentoring',
-        tag:      'Mentoría',
+        tag:      'Softskills',
         date:     'Abril 2026',
         slug:     'habilidad-infravalorada-dar-recibir-mentoria',
         title:    'La habilidad más infravalorada del mundo profesional: dar y recibir mentoría',

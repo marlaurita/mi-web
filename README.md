@@ -5,17 +5,48 @@ Sitio web personal de **marilau** — hub de mentoría, blog, comunidad y contac
 ## Stack
 
 - React 18 + Vite 5
-- CSS inline / sin librería de UI externa
+- React Router DOM 7
+- CSS puro con variables (sin librería de UI externa)
 - Fuentes: Space Grotesk + Inter (Google Fonts)
+- Deploy: GitHub Pages via GitHub Actions
+
+## Rutas
+
+| Ruta | Descripción |
+|------|-------------|
+| `/` | Landing principal (Hero, About, Mentoring, Blog, Community, Contact) |
+| `/blog/:slug` | Post individual de blog |
+| `/links` | Página estilo Linktree con links y redes sociales |
 
 ## Estructura
 
 ```
 src/
-├── content.js      # Todo el texto del sitio
-├── theme.js        # Colores y tokens de diseño
-├── components/     # Secciones: Hero, About, Mentoring, Blog, Community, Contact
-└── i18n/           # Traducciones
+├── main.jsx            # Entry point con LanguageProvider
+├── App.jsx             # Router (Home + BlogPost + Links)
+├── index.css           # Estilos globales y variables CSS
+├── theme.js            # Tokens de diseño (colores, fuentes, radios)
+├── content.js          # Exporta contenido en español por defecto
+├── components/
+│   ├── Navbar/
+│   ├── Hero/
+│   ├── About/
+│   ├── Mentoring/
+│   ├── Blog/
+│   ├── Community/
+│   ├── Contact/
+│   └── Footer/
+├── pages/
+│   ├── BlogPost/       # Página dinámica de posts (/blog/:slug)
+│   └── Links/          # Página Linktree (/links)
+└── i18n/
+    ├── LanguageContext.jsx
+    ├── es.js
+    └── en.js
+public/
+├── 404.html            # Redirect para SPA routing en GitHub Pages
+├── CNAME               # Dominio personalizado (marilau.tech)
+└── profile.png
 ```
 
 ## Desarrollo
@@ -25,16 +56,17 @@ npm install
 npm run dev
 ```
 
-## Build
+## Build y deploy
+
+El deploy se ejecuta automáticamente al hacer push a `main` vía GitHub Actions.
 
 ```bash
-npm run build
+npm run build   # build local
 ```
 
 ## Personalización
 
-- **Texto:** editar `src/content.js`
-- **Colores/marca:** editar `src/theme.js`
-- **Logo:** reemplazar placeholder en `Hero.jsx` con imagen real
-- **Formulario de contacto:** conectar a Formspree o EmailJS en el componente Contact
-- **Links sociales:** actualizar URLs en `src/content.js` (actualmente apuntan a `#`)
+- **Texto del sitio:** `src/i18n/es.js` (español) / `src/i18n/en.js` (inglés)
+- **Colores/marca:** `src/theme.js`
+- **Links de /links:** array `LINKS` y `SOCIALS` en `src/pages/Links/Links.jsx`
+- **Formulario de contacto:** conectar a Formspree o EmailJS en `Contact.jsx`

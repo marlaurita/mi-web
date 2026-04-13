@@ -8,6 +8,7 @@ import Community from './components/Community/Community'
 import Contact   from './components/Contact/Contact'
 import Footer    from './components/Footer/Footer'
 import BlogPost  from './pages/BlogPost/BlogPost'
+import Links     from './pages/Links/Links'
 
 function Home() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
       <Routes>
         <Route path="/"            element={<Home />} />
         <Route path="/blog/:slug"  element={<BlogPost />} />
+        <Route path="/links"       element={<Links />} />
       </Routes>
     </BrowserRouter>
   )

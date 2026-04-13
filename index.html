@@ -2,6 +2,19 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // GitHub Pages SPA: restaura la ruta codificada por 404.html
+      (function () {
+        var search = window.location.search;
+        if (search.slice(1, 2) === '/') {
+          var decoded = search.slice(1).split('&').map(function (s) { return s.replace(/~and~/g, '&'); });
+          history.replaceState(
+            null, null,
+            decoded[0] + (decoded[1] ? '?' + decoded[1] : '') + window.location.hash
+          );
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="marilau.tech — Mentoría, comunidad y tecnología con propósito" />

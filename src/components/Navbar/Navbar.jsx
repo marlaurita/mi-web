@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageContext'
 import './Navbar.css'
 
@@ -7,6 +8,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { lang, toggleLang, content } = useLanguage()
   const { site, nav } = content
+  const navigate = useNavigate()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -17,7 +19,11 @@ export default function Navbar() {
   const handleNav = (href) => {
     setMenuOpen(false)
     const el = document.getElementById(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/#' + href)
+    }
   }
 
   return (

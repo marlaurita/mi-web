@@ -77,7 +77,7 @@ export default function Links() {
         {/* Name & bio */}
         <h1 className="links-name gradient-text">María Laura</h1>
         <div className="links-bio">
-          <p>👩‍💻 Ingeniera que cuida equipos</p>
+          <p>👩🏻‍💻 Ingeniera que cuida equipos</p>
           <p>📱 Mobile · Producto · DevExp</p>
           <p>🌱 Mentora · WTM ✨ IA curious</p>
           <p>🖥️ Product Engineering</p>

@@ -15,7 +15,8 @@ Sitio web personal de **marilau** — hub de mentoría, blog, comunidad y contac
 | Ruta | Descripción |
 |------|-------------|
 | `/` | Landing principal (Hero, About, Mentoring, Blog, Community, Contact) |
-| `/blog/:slug` | Post individual de blog |
+| `/:lang/blog/:slug` | Post individual de blog (ej: `/es/blog/mi-post`, `/en/blog/my-post`) |
+| `/blog/:slug` | Redirect al post con el idioma activo |
 | `/links` | Página estilo Linktree con links y redes sociales |
 
 ## Estructura
@@ -37,7 +38,7 @@ src/
 │   ├── Contact/
 │   └── Footer/
 ├── pages/
-│   ├── BlogPost/       # Página dinámica de posts (/blog/:slug)
+│   ├── BlogPost/       # Página dinámica de posts (/:lang/blog/:slug)
 │   └── Links/          # Página Linktree (/links)
 └── i18n/
     ├── LanguageContext.jsx

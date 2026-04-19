@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
+import { useLanguage } from './i18n/LanguageContext'
 import Navbar    from './components/Navbar/Navbar'
 import Hero      from './components/Hero/Hero'
 import About     from './components/About/About'
@@ -47,13 +48,20 @@ function Home() {
   )
 }
 
+function BlogPostRedirect() {
+  const { slug } = useParams()
+  const { lang } = useLanguage()
+  return <Navigate to={`/${lang}/blog/${slug}`} replace />
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/"            element={<Home />} />
-        <Route path="/blog/:slug"  element={<BlogPost />} />
-        <Route path="/links"       element={<Links />} />
+        <Route path="/"                    element={<Home />} />
+        <Route path="/:lang/blog/:slug"    element={<BlogPost />} />
+        <Route path="/blog/:slug"          element={<BlogPostRedirect />} />
+        <Route path="/links"               element={<Links />} />
       </Routes>
     </BrowserRouter>
   )

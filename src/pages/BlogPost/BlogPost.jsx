@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageContext'
+
+const SITE_URL = 'https://marilau.tech'
+const VALID_LANGS = ['es', 'en']
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import './BlogPost.css'
@@ -36,12 +39,56 @@ function ContentBlock({ block }) {
 }
 
 export default function BlogPost() {
-  const { slug } = useParams()
+  const { lang: urlLang, slug } = useParams()
   const navigate = useNavigate()
-  const { content } = useLanguage()
+  const { lang, setLang, content } = useLanguage()
   const { blog } = content
 
   const post = blog.posts.find((p) => p.slug === slug)
+
+  // Sync language from URL param
+  useEffect(() => {
+    if (VALID_LANGS.includes(urlLang) && urlLang !== lang) {
+      setLang(urlLang)
+    }
+  }, [urlLang])
+
+  // When lang changes (e.g. via Navbar toggle), update the URL
+  useEffect(() => {
+    if (VALID_LANGS.includes(urlLang) && lang !== urlLang) {
+      navigate(`/${lang}/blog/${slug}`, { replace: true })
+    }
+  }, [lang])
+
+  // Canonical + hreflang tags
+  useEffect(() => {
+    const upsert = (sel, attrs) => {
+      let el = document.querySelector(sel)
+      if (!el) {
+        el = document.createElement('link')
+        document.head.appendChild(el)
+      }
+      Object.assign(el, attrs)
+      return el
+    }
+
+    upsert('link[rel="canonical"]', {
+      rel: 'canonical',
+      href: `${SITE_URL}/${urlLang}/blog/${slug}`,
+    })
+    VALID_LANGS.forEach((l) =>
+      upsert(`link[rel="alternate"][hreflang="${l}"]`, {
+        rel: 'alternate',
+        hreflang: l,
+        href: `${SITE_URL}/${l}/blog/${slug}`,
+      })
+    )
+
+    return () => {
+      document.querySelector('link[rel="canonical"]')?.remove()
+      document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove())
+    }
+  }, [urlLang, slug])
 
   useEffect(() => {
     window.scrollTo(0, 0)

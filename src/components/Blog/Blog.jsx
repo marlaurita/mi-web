@@ -11,7 +11,7 @@ const tagClass = {
 
 export default function Blog() {
   const navigate = useNavigate()
-  const { content } = useLanguage()
+  const { lang, content } = useLanguage()
   const { blog } = content
 
   return (
@@ -33,10 +33,10 @@ export default function Blog() {
             <article
               key={i}
               className={`post-card${post.content?.length ? ' post-card--linked' : ''}`}
-              onClick={() => post.content?.length && navigate(`/blog/${post.slug}`)}
+              onClick={() => post.content?.length && navigate(`/${lang}/blog/${post.slug}`)}
               role={post.content?.length ? 'button' : undefined}
               tabIndex={post.content?.length ? 0 : undefined}
-              onKeyDown={(e) => e.key === 'Enter' && post.content?.length && navigate(`/blog/${post.slug}`)}
+              onKeyDown={(e) => e.key === 'Enter' && post.content?.length && navigate(`/${lang}/blog/${post.slug}`)}
             >
               <div className="post-card__meta">
                 <span className={`post-tag ${tagClass[post.tagKey] ?? 'post-tag--mentoring'}`}>

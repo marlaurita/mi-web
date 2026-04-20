@@ -9,7 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "lucide-react": "^0.441.0",
@@ -23,6 +24,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "gh-pages": "^6.3.0",
+    "sharp": "^0.34.5",
     "vite": "^5.4.2"
   }
 }

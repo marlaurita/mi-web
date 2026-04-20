@@ -17,7 +17,10 @@ function ActivityCard({ item, lang }) {
   return (
     <div className="comm-card">
       <div className="comm-card__img-wrap">
-        <img src={item.image} alt={t.title} className="comm-card__img" loading="lazy" />
+        <picture>
+          <source srcSet={item.image.replace(/\.(jpg|png)$/i, '.webp')} type="image/webp" />
+          <img src={item.image} alt={t.title} className="comm-card__img" loading="lazy" />
+        </picture>
       </div>
       <div className="comm-card__body">
         <span className="comm-card__date">{formatDate(item.date, lang)}</span>

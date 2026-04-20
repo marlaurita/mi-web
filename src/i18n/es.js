@@ -80,7 +80,7 @@ export default {
           'Toma de decisiones técnicas',
         ],
         cta:         'Quiero esta mentoría',
-        highlighted: false,
+        highlighted: true,
       },
       {
         name:        'Consultoría técnica',
@@ -96,7 +96,7 @@ export default {
           'Adopción de Inteligencia Artificial'
         ],
         cta:         'Solicitar sesión',
-        highlighted: true,
+        highlighted: false,
       },
       {
         name:        'Proyectos Pequeños',

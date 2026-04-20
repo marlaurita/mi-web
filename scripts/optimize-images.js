@@ -32,6 +32,7 @@ let converted = 0
 for (const file of files) {
   const out = file.replace(/\.(jpg|jpeg|png)$/i, '.webp')
   await sharp(file)
+    .rotate()                                          // respeta orientación EXIF
     .resize({ width: MAX_W, withoutEnlargement: true })
     .webp({ quality: QUALITY })
     .toFile(out)

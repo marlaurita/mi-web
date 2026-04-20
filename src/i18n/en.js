@@ -80,7 +80,7 @@ export default {
           'Technical decision-making',
         ],
         cta:         'I want this mentoring',
-        highlighted: false,
+        highlighted: true,
       },
       {
         name:        'Technical consulting',
@@ -96,7 +96,7 @@ export default {
           'AI adoption',
         ],
         cta:         'Request session',
-        highlighted: true,
+        highlighted: false,
       },
       {
         name:        'Small Projects',

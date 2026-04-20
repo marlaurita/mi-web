@@ -10,6 +10,26 @@
 // Ordenadas de más reciente a más antigua.
 export const talks = [
   {
+    id: 'its-not-fake-ninaspro',
+    image: '/community/talks/ninaspro-conce.JPG',
+    date: '2026-03-28',
+    attendees: 20,
+    type: 'in-person',
+    es: {
+      title: "It's not fake, soy buena en esto y lo sé",
+      description:
+        'Más allá del síndrome del impostor: cómo pasar del modo supervivencia a un liderazgo auténtico y seguro que empodere a los equipos.',
+      linkLabel: null,
+    },
+    en: {
+      title: "It's Not Fake, I'm Good at This and I Know It",
+      description:
+        'Beyond imposter syndrome — how to move from survival mode to authentic, confident leadership that empowers teams.',
+      linkLabel: null,
+    },
+    link: null,
+  },
+  {
     id: 'liderazgo-tecnico',
     image: '/community/talks/liderazgo-tecnico.jpg',
     date: '2025-11-29',
@@ -67,7 +87,7 @@ export const talks = [
         'How to align technical, design, and product teams around a roadmap without heavy processes — transforming avoidance into co-creation.',
       linkLabel: 'View at Nerdear.la',
     },
-    link: 'https://nerdear.la/agenda/roadmap-tizando-el-caos-desbloqueando-la-conversacion-que-todos-evitan/',
+    link: 'https://www.youtube.com/watch?v=gwe3Xr1l_tU&list=PLTTdzfRyGY1vG5T43-_QCjTLzpRTgrBr-',
   },
   {
     id: 'its-not-fake',
@@ -154,6 +174,26 @@ export const talks = [
 // --- EVENTS (Eventos organizados) ---
 // Ordenados de más reciente a más antiguo.
 export const events = [
+  {
+    id: 'techton-2026',
+    image: '/community/events/techton-2026.png',
+    date: '2026-01-23',
+    attendees: 100,
+    speakers: 30,
+    type: 'virtual',
+    es: {
+      title: 'TechTon - Comunidades Tech unidas por una causa',
+      description:
+        'TechTon fue un evento online efectuado el 23 y 24 de enero de 2026, uniendo las comunidades de tecnología a recaudar fondos para bomberos de Chile para ayudarlos a mitigar los efectos de los incendios que empezaron el 16 de enero de 2026 en la región del Biobío Chille.',
+      linkLabel: 'Ver evento',
+    },
+    en: {
+      title: 'TechTon - CommunityOS Streaming Event',
+      description:
+        'TechTon was a streaming event on January 23rd and 24th, 2026, uniting tech communities to raise funds for Bomberos de Chile to help mitigate the effects of the fires that began on January 16th, 2026, in the Biobío Region of Chile.',
+    },
+    link: 'https://techton.cl/',
+  },
   {
     id: 'wtm-chile-2025',
     image: '/community/events/wtm-chile-2025.jpg',

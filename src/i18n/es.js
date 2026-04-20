@@ -175,35 +175,12 @@ export default {
 
   // --- COMUNIDAD ---
   community: {
-    sectionLabel: 'Comunidad',
-    title:        'Construyendo tech en colectivo',
-    description:  'Creo en los espacios donde las personas se apoyan mutuamente. Estos son algunos de los proyectos comunitarios en los que participo y lidero.',
-    items: [
-      {
-        icon:        '🌐',
-        name:        'Comunidad marilau.tech',
-        role:        'Fundadora',
-        description: 'Espacio digital para personas en tech que quieren aprender, conectar y crecer sin competencia tóxica.',
-        link:        '#',
-        linkLabel:   'Unirme',
-      },
-      {
-        icon:        '👩🏻‍💻',
-        name:        'Women TechMakers',
-        role:        'Embajadora',
-        description: 'Women Techmakers es un ecosistema de profesionales comprometidas que abogan por una mayor diversidad de género en el sector tecnológico de todo el mundo, a través de la comunidad, la visibilidad y los recursos.',
-        link:        'https://www.technovation.org/women-techmakers/',
-        linkLabel:   'Conocer más',
-      },
-      {
-        icon:        '🎙️',
-        name:        'Talks & Eventos',
-        role:        'Speaker',
-        description: 'Doy charlas sobre carrera, educación tecnológica y comunidad en eventos presenciales y virtuales.',
-        link:        '#',
-        linkLabel:   'Ver charlas',
-      },
-    ],
+    sectionLabel:   'Comunidad',
+    title:          'Construyendo tech en colectivo',
+    description:    'Como embajadora WTM he dado charlas, organizado eventos y mentoreado a personas en distintas etapas de su carrera tech. Aquí está el registro.',
+    tabTalks:       'Charlas',
+    tabEvents:      'Eventos',
+    tabMentorship:  'Mentoría',
   },
 
   // --- CONTACTO ---

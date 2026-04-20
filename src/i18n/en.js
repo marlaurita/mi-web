@@ -204,35 +204,12 @@ export default {
 
   // --- COMMUNITY ---
   community: {
-    sectionLabel: 'Community',
-    title:        'Building tech together',
-    description:  'I believe in spaces where people support each other. Here are some of the community projects I participate in and lead.',
-    items: [
-      {
-        icon:        '🌐',
-        name:        'marilau.tech Community',
-        role:        'Founder',
-        description: 'Digital space for people in tech who want to learn, connect, and grow without toxic competition.',
-        link:        '#',
-        linkLabel:   'Join',
-      },
-      {
-        icon:        '👩🏻‍💻',
-        name:        'Women TechMakers',
-        role:        'Ambassador',
-        description: 'Women Techmakers is an ecosystem of committed professionals who advocate for greater gender diversity in the technology sector worldwide, through community, visibility, and resources.',
-        link:        'https://www.technovation.org/women-techmakers/',
-        linkLabel:   'Learn more',
-      },
-      {
-        icon:        '🎙️',
-        name:        'Talks & Events',
-        role:        'Speaker',
-        description: 'I give talks on career, tech education, and community at in-person and virtual events.',
-        link:        '#',
-        linkLabel:   'See talks',
-      },
-    ],
+    sectionLabel:   'Community',
+    title:          'Building tech together',
+    description:    'As a WTM Ambassador I have given talks, organized events, and mentored people across different stages of their tech careers. Here\'s the record.',
+    tabTalks:       'Talks',
+    tabEvents:      'Events',
+    tabMentorship:  'Mentorship',
   },
 
   // --- CONTACT ---

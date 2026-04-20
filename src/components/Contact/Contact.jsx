@@ -42,7 +42,9 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Conectar con Formspree, EmailJS u otro servicio aquí
+    const subject = encodeURIComponent(`[marilau.tech] ${form.subject}`)
+    const body    = encodeURIComponent(`Nombre: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)
+    window.location.href = `mailto:marilau.codes@gmail.com?subject=${subject}&body=${body}`
     setSent(true)
   }
 

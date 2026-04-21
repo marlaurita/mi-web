@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Backgrounds Export — marilau.tech</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #111;
+      font-family: 'Inter', sans-serif;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      align-items: center;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .label {
+      color: #aaa;
+      font-size: 11px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* ── Contenedor 1080×1080 ── */
+    .slide {
+      width: 1080px;
+      height: 1080px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════════════════
+       FONDO 1 — Navy + blobs + grid (Hero)
+    ══════════════════════════════════════════ */
+    .bg-hero {
+      background-color: #1F244A;
+    }
+    .bg-hero .blob-cyan {
+      position: absolute;
+      top: -5%;
+      right: -8%;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(102,230,221,0.18) 0%, transparent 65%);
+      filter: blur(50px);
+    }
+    .bg-hero .blob-purple {
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(154,97,141,0.20) 0%, transparent 65%);
+      filter: blur(50px);
+    }
+    .bg-hero .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(102,230,221,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(102,230,221,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* ══════════════════════════════════════════
+       FONDO 2 — Ocean profundo + glow cyan
+    ══════════════════════════════════════════ */
+    .bg-ocean {
+      background: linear-gradient(160deg, #0f1a2e 0%, #184F67 60%, #1F244A 100%);
+    }
+    .bg-ocean .glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(102,230,221,0.10) 0%, transparent 65%);
+      filter: blur(60px);
+    }
+    .bg-ocean .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(102,230,221,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(102,230,221,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+
+    /* ══════════════════════════════════════════
+       FONDO 3 — Navy + gradiente diagonal marca
+    ══════════════════════════════════════════ */
+    .bg-brand {
+      background: linear-gradient(135deg, #1F244A 0%, #1a2d4a 40%, #184F67 100%);
+    }
+    .bg-brand .blob-top {
+      position: absolute;
+      top: -15%;
+      right: -10%;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(102,230,221,0.14) 0%, transparent 65%);
+      filter: blur(60px);
+    }
+    .bg-brand .blob-bottom {
+      position: absolute;
+      bottom: -10%;
+      left: -5%;
+      width: 550px;
+      height: 550px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(154,97,141,0.18) 0%, transparent 65%);
+      filter: blur(60px);
+    }
+    .bg-brand .accent-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #66e6dd 40%, #9a618d 70%, transparent);
+      opacity: 0.5;
+    }
+    .bg-brand .accent-line-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #66e6dd 40%, #9a618d 70%, transparent);
+      opacity: 0.3;
+    }
+
+    /* ══════════════════════════════════════════
+       FONDO 4 — Navy oscuro + gold accent
+    ══════════════════════════════════════════ */
+    .bg-dark-gold {
+      background: linear-gradient(160deg, #111827 0%, #1F244A 100%);
+    }
+    .bg-dark-gold .blob-gold {
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(240,184,16,0.10) 0%, transparent 60%);
+      filter: blur(60px);
+    }
+    .bg-dark-gold .blob-ocean {
+      position: absolute;
+      bottom: -5%;
+      right: -5%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(24,79,103,0.60) 0%, transparent 70%);
+      filter: blur(40px);
+    }
+    .bg-dark-gold .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(240,184,16,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240,184,16,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .bg-dark-gold .accent-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #F0B810 50%, transparent);
+      opacity: 0.6;
+    }
+
+    /* ══════════════════════════════════════════
+       FONDO 5 — Links page (navy + blobs sólidos difuminados)
+    ══════════════════════════════════════════ */
+    .bg-links {
+      background-color: #1F244A;
+    }
+    .bg-links .blob-links-cyan {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 540px;
+      height: 540px;
+      border-radius: 50%;
+      background: #66e6dd;
+      opacity: 0.18;
+      filter: blur(80px);
+    }
+    .bg-links .blob-links-purple {
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: #9a618d;
+      opacity: 0.18;
+      filter: blur(80px);
+    }
+
+    /* instrucciones */
+    .instrucciones {
+      max-width: 1080px;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.8;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 24px 32px;
+    }
+    .instrucciones strong { color: #66e6dd; }
+    .instrucciones code {
+      background: #252525;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="instrucciones">
+    <strong>Cómo exportar:</strong><br>
+    1. Abre este archivo en Chrome o Safari.<br>
+    2. Para cada fondo, haz <strong>clic derecho → "Inspeccionar"</strong>, selecciona el elemento <code>.slide</code> y en DevTools → ⋮ → <strong>"Capture node screenshot"</strong> → descarga el PNG exacto de 1080×1080.<br>
+    3. O también puedes usar la extensión <strong>GoFullPage</strong> o Cmd+Shift+4 y seleccionar exactamente el cuadrado.
+  </div>
+
+  <!-- FONDO 1 -->
+  <div>
+    <h2>Fondo 1 — Hero (Navy + Blobs + Grid)</h2>
+    <div class="slide bg-hero">
+      <div class="blob-cyan"></div>
+      <div class="blob-purple"></div>
+      <div class="grid"></div>
+    </div>
+    <p class="label">bg-hero · #1F244A · blobs cyan + purple · grid sutil</p>
+  </div>
+
+  <!-- FONDO 2 -->
+  <div>
+    <h2>Fondo 2 — Ocean Profundo + Glow Central</h2>
+    <div class="slide bg-ocean">
+      <div class="glow"></div>
+      <div class="grid"></div>
+    </div>
+    <p class="label">bg-ocean · gradiente #0f1a2e → #184F67 · glow cyan central</p>
+  </div>
+
+  <!-- FONDO 3 -->
+  <div>
+    <h2>Fondo 3 — Gradiente Marca (Cyan + Purple)</h2>
+    <div class="slide bg-brand">
+      <div class="blob-top"></div>
+      <div class="blob-bottom"></div>
+      <div class="accent-line-top"></div>
+      <div class="accent-line"></div>
+    </div>
+    <p class="label">bg-brand · navy → ocean · blobs brand · líneas acento</p>
+  </div>
+
+  <!-- FONDO 4 -->
+  <div>
+    <h2>Fondo 4 — Dark + Gold Accent</h2>
+    <div class="slide bg-dark-gold">
+      <div class="blob-gold"></div>
+      <div class="blob-ocean"></div>
+      <div class="grid"></div>
+      <div class="accent-line"></div>
+    </div>
+    <p class="label">bg-dark-gold · #111827 → #1F244A · glow gold · grid dorado</p>
+  </div>
+
+  <!-- FONDO 5 -->
+  <div>
+    <h2>Fondo 5 — Links Page (Navy + Blobs sólidos)</h2>
+    <div class="slide bg-links">
+      <div class="blob-links-cyan"></div>
+      <div class="blob-links-purple"></div>
+    </div>
+    <p class="label">bg-links · #1F244A · blob cyan esquina sup-der · blob purple esquina inf-izq</p>
+  </div>
+
+</body>
+</html>

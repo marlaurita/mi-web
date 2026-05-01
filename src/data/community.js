@@ -242,6 +242,25 @@ export const events = [
 // Ordenadas de más reciente a más antigua.
 export const mentorship = [
   {
+    id: 'tu-web-tus-reglas',
+    image: '/community/mentorship/tics1.jpeg',
+    date: '2026-04-25',
+    hours: 1,
+    es: {
+      title: 'Tu mundo, tu web, tus reglas 🌈',
+      description:
+        "Let's create, explore, and dream big! In this workshop, we'll discover how websites are built. We'll learn the basics of HTML, CSS, and JavaScript in a practical and engaging way.",
+      linkLabel: 'Ver post',
+    },
+    en: {
+      title: 'Your world, your web, your rules 🌈',
+      description:
+        'Workshops with students, teachers, and education ministry officials on digital wellness and healthy digital coexistence from early ages.',
+      linkLabel: 'View post',
+    },
+    link: 'https://www.linkedin.com/posts/fantasticas-stem_este-s%C3%A1bado-realizamos-una-nueva-jornada-activity-7454929213045833728-MD45?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB5VGB8BiYDy6DX2RlUPuzAm6cgogOVPBmI',
+  },
+  {
     id: 'verdades-mitos-digital',
     image: '/community/mentorship/verdades-mitos-digital.jpg',
     date: '2025-03-14',

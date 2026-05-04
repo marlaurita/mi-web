@@ -123,6 +123,59 @@ export default {
     description:  'I write about technology, career, community, and everything in between. No filters.',
     posts: [
       {
+        tagKey:   'softskills',
+        tag:      'Softskills',
+        date:     'May 2026',
+        slug:     'ego-del-desarrollador',
+        title:    'Developer ego and why regulating it will make you a better professional',
+        excerpt:  'Your code can be impeccable, but if your ego is unchecked it can cost you jobs, arguments, and opportunities. Here\'s how to recognise it and what to do about it.',
+        readTime: '5 min',
+        content: [
+          { type: 'paragraph', text: 'Ego, from the Latin "I", is the psychological structure that organises our self-perception, consciousness, and identity. It acts as a mediator between instincts and morality, helping us interpret reality. Although necessary for self-esteem, an unchecked ego can distort reality and generate defensive behaviour.' },
+          { type: 'paragraph', text: 'From a software development perspective — or when building a professional career — it is vital to understand the processes we must master to call ourselves experts in a subject. However, when beyond expertise we begin to undervalue areas outside our profession, we fall into a common mistake: believing those areas are not important, because only what we do counts and matters.' },
+          { type: 'paragraph', text: 'I do not judge you — it happened to me. It cost me jobs, arguments, and a closed-mindedness that showed in many ways. Only years of experience made me realise that my ignorance was not only bold, but downright loud. I would not blame myself (or you), since university curricula often do not cover these more management-oriented topics — and if they do, we were probably hungrier as students for technical knowledge than for understanding the full cycle of product development.' },
+          { type: 'paragraph', text: 'Beyond you and me, many products that never see the light of success probably had someone in a very technical role who used their silver bullet without considering the full picture.' },
+
+          { type: 'h2', text: 'Is your ego in check? Answer these questions' },
+          { type: 'paragraph', text: 'To recognise this pattern of unchecked ego — or confirm it is already under control — I invite you to answer:' },
+          { type: 'list', items: [
+            'Are your daily stand-up updates overly technical?',
+            'Do you not understand why team metrics matter and why they need to improve — such as velocity, performance, DORA metrics?',
+            'Do you not understand why people talk about KPIs, OKRs, ROI, and similar?',
+            'Do ceremonies like refinements, retrospectives, pre-planning, PI planning, and other non-technical conversations feel like a waste of time?',
+            'Do you fail to see the big picture, wishing you could just focus on one task at a time?',
+            'Do you not understand why people in other roles sometimes want to grasp technical topics, or why it matters that they do?',
+          ]},
+          { type: 'paragraph', text: 'If you identify with 3 or more, that is an interesting signal worth exploring — and you might even discover new fields you would like to expand into. Especially now, with AI on the rise, generalist profiles are gaining significant importance and value in the industry.' },
+
+          { type: 'h2', text: 'Practical advice — whether your ego is "unchecked" or you are simply curious' },
+
+          { type: 'h3', text: 'Have recurring one-on-ones with your team' },
+          { type: 'paragraph', text: 'Schedule recurring sessions with all members of your team — at least half an hour per month. Even when there is nothing specific to discuss, it strengthens a relationship beyond the technical: learn what someone\'s day-to-day looks like, their processes, and how from your role you could help streamline their work.' },
+
+          { type: 'h3', text: 'Understand metrics and their business impact' },
+          { type: 'paragraph', text: 'Metrics tell you how many users are happy with the product or service, how many new users are joining, and the revenue that justifies our salaries — and in less welcome news, they also reveal the volume of complaints and dissatisfaction with the experience being offered.' },
+
+          { type: 'h3', text: 'Know your users' },
+          { type: 'paragraph', text: 'We technical people are users too — true — but we are not the users with the final say or the loudest voice. It is important to explore the real needs of people out in the world. Something you think works great might turn out to be among the least relevant things to users in their day-to-day, which in turn can affect the metrics we just discussed.' },
+
+          { type: 'h3', text: 'Ceremonies = learning and context opportunities' },
+          { type: 'paragraph', text: 'Even if you do not contribute directly, learning to filter where you can gain knowledge will greatly help your understanding of the business. In team ceremonies your feedback will always matter, so your attendance should be non-negotiable.' },
+
+          { type: 'h3', text: "Let's normalise talking about expectations" },
+          { type: 'paragraph', text: 'If professional growth is your goal, you can find a learning path in the expectations others have of your role or of you specifically. You can also understand what those people want to hear from you when you give a status update — for example, talking about risks, blockers, or dependencies with external teams, rather than "a confusion in log formatting".' },
+
+          { type: 'h3', text: 'Invest in your education' },
+          { type: 'paragraph', text: 'Especially in topics that interest you. For free, you can find community events, social media profiles covering subjects you care about, and even workshops or webinars. If you want to invest a little more, there are online courses, books, or more academic offerings from universities such as diplomas or master\'s programmes.' },
+
+          { type: 'h3', text: 'Look outside the box' },
+          { type: 'paragraph', text: 'Sometimes a solution you are only implementing for your team could work for the entire organisation — and only you might realise that impact. The invitation is to look at cross-cutting problems and always keep them in mind when generating a technical solution.' },
+
+          { type: 'paragraph', text: 'The goal is not to judge a system or yourself: it is to recognise the situation and want to do something about it, where the greatest benefit will be for you and for the environment you work in. More often than you imagine, attitude > aptitude.' },
+          { type: 'paragraph', text: 'Have you applied any of these tips so far this year? Would you add any of your own? What topics would you like me to keep writing about?' },
+        ],
+      },
+      {
         tagKey:   'mentoring',
         tag:      'Softskills',
         date:     'April 2026',

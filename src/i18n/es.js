@@ -123,6 +123,59 @@ export default {
     description:  'Escribo sobre tecnología, carrera, comunidad y todo lo que va en medio. Sin filtros.',
     posts: [
       {
+        tagKey:   'softskills',
+        tag:      'Softskills',
+        date:     'Mayo 2026',
+        slug:     'ego-del-desarrollador',
+        title:    'Ego del desarrollador y por qué regularlo te hará mejor profesional',
+        excerpt:  'Tu código puede ser impecable, pero si tu ego no está regulado puede costarte empleos, discusiones y oportunidades. Te cuento cómo reconocerlo y qué hacer.',
+        readTime: '5 min',
+        content: [
+          { type: 'paragraph', text: 'El ego, del latín "yo", es la estructura psicológica que organiza nuestra autopercepción, conciencia e identidad. Actúa como mediador entre los instintos y la moral, ayudándonos a interpretar la realidad. Aunque necesario para la autoestima, un ego desmedido puede distorsionar la realidad y generar comportamientos defensivos.' },
+          { type: 'paragraph', text: 'Visto desde el lado del desarrollo de software o para la construcción de una carrera profesional es vital entender los procesos que debemos dominar para hacernos llamar expertos en un tema, sin embargo cuando aparte de la expertiz empezamos a menospreciar las demás áreas externas a nuestra profesión, caemos en un error común: creer que esas áreas no son importantes, porque solo lo que hacemos es lo que cuenta y lo que importa.' },
+          { type: 'paragraph', text: 'No te juzgo, a mí me pasó, me costó empleos, me costó discusiones, poca apertura evidenciada de muchas maneras por parte de mi persona, y solo los años de experiencia me hicieron ver que mi ignorancia no solo era atrevida sino que además era escandalosa. Tampoco me culparía (ni te culparía), puesto que las mallas curriculares de la universidad muchas veces no cubren estos temas que son más de gestión, y si los cubren es probable que como adolescentes tengamos más hambre de conocimientos técnicos que de entender cómo funciona el ciclo completo del desarrollo de un producto.' },
+          { type: 'paragraph', text: 'Saliendo de ti y de mí, muchos de los productos que no ven la luz del éxito es porque probablemente hubo una persona en un rol muy técnico que usó su bala de plata sin considerar el panorama completo.' },
+
+          { type: 'h2', text: '¿Tienes el ego regulado? Responde estas preguntas' },
+          { type: 'paragraph', text: 'Para reconocer este patrón de ego desmedido — o confirmar que ya está controlado — te invito a responder:' },
+          { type: 'list', items: [
+            '¿Tus status en la daily son muy técnicos?',
+            '¿No entiendes por qué las métricas del equipo son importantes y por qué deben mejorarse, como velocidad, rendimiento, métricas DORA?',
+            '¿No entiendes por qué hay que hablar de KPI\'s, OKR\'s, ROI, entre otros?',
+            '¿Las ceremonias como refinamientos, retrospectivas, PRE Planning, PI planning y todas aquellas conversaciones que no consisten en revisar temas técnicos te dan mucha flojera?',
+            '¿No ves todo el panorama y ojalá solo enfocarte en una tarea a la vez?',
+            '¿No entiendes por qué las personas de otros roles a veces quieren entender temas técnicos ni por qué es importante que entiendan?',
+          ]},
+          { type: 'paragraph', text: 'Si te identificas con 3 o más, puede ser una señal interesante para explorar, y puede que hasta descubras nuevos campos donde te gustaría expandir tu conocimiento. ¡Valioso!, sobretodo ahora en vista de que gracias a la IA, los perfiles generalistas adquieren mucha importancia y valor en la industria.' },
+
+          { type: 'h2', text: 'Consejos útiles, tanto si tu ego es "desmedido" como si eres un alma curiosa' },
+
+          { type: 'h3', text: 'Ten sesiones recurrentes con tu equipo' },
+          { type: 'paragraph', text: 'Ten sesiones recurrentes con todos los miembros de tu equipo, al menos media hora al mes. Aunque no haya nada de que hablar, fortalece una relación más allá de lo técnico: conoce cómo es un día a día de esa persona, sus procesos y cómo desde tu rol podrías ayudar a agilizar sus tareas.' },
+
+          { type: 'h3', text: 'Entiende las métricas y su impacto en el negocio' },
+          { type: 'paragraph', text: 'De las métricas vienen: cantidad de usuarios felices con el producto o servicio, cantidad de usuarios nuevos, el ingreso que justifica nuestro sueldo, y en noticias no tan buenas también vienen cantidad de reclamos o de descontento con la experiencia que se ofrece.' },
+
+          { type: 'h3', text: 'Conoce a tus usuarios' },
+          { type: 'paragraph', text: 'Las personas técnicas somos un usuario más, es correcto, pero no somos los usuarios con la última palabra ni con la palabra de más peso. Es importante explorar afuera las necesidades reales de las personas. Algo que tú crees que funciona, afuera puede resultar de las cosas que menos le interesa a los usuarios para su día a día, y por ende puede que se vean afectadas las métricas de las que hablamos más arriba.' },
+
+          { type: 'h3', text: 'Ceremonias = oportunidad de aprendizaje y contexto' },
+          { type: 'paragraph', text: 'Aunque no necesariamente aportes directamente, aprender a filtrar dónde puedes obtener conocimiento será de mucha ayuda para tu entendimiento del negocio. En las ceremonias relacionadas al equipo siempre será importante tu feedback, por lo que no debería ser negociable tu asistencia.' },
+
+          { type: 'h3', text: 'Normalicemos hablar de expectativas' },
+          { type: 'paragraph', text: 'Si tu interés es un crecimiento profesional, puedes encontrar una ruta de aprendizaje en las expectativas de las otras personas hacia tu rol o hacia tu persona. Además también puedes entender qué quieren escuchar de ti esas personas a la hora de dar un status; por ejemplo: hablar de si tienes algún riesgo, bloqueo o dependencia con un área externa a tu equipo, en lugar de hablar de "una confusión en formato de logs".' },
+
+          { type: 'h3', text: 'Invierte en tu educación' },
+          { type: 'paragraph', text: 'Sobretodo en temas que te interesen. Gratis puedes encontrar eventos de comunidades, perfiles en redes sociales que hablen de temas donde tengas interés, incluso workshops o webinars. Si quieres invertir un poco más, puedes encontrar recursos como educación en línea, libros, o algo más académico ofrecido por alguna universidad como diplomado o maestría.' },
+
+          { type: 'h3', text: 'Mira fuera de la caja' },
+          { type: 'paragraph', text: 'A veces una solución que solo estás implementando para tu equipo puede funcionar para toda la organización, y solo tú podrías darte cuenta de ese impacto. La invitación es a mirar los problemas transversales y siempre pensar en ellos a la hora de generar una solución técnica.' },
+
+          { type: 'paragraph', text: 'Lo importante no es juzgar un sistema ni a ti mismo: es tener un reconocimiento de la situación y querer hacer algo al respecto, donde el mayor beneficio será para ti mismo/a y para el entorno donde trabajas. Más veces de las que imaginas, actitud > aptitud.' },
+          { type: 'paragraph', text: '¿Has aplicado alguno de estos consejos en lo que va de año? ¿Agregarías alguno propio? ¿De qué temas te gustaría que siga publicando?' },
+        ],
+      },
+      {
         tagKey:   'mentoring',
         tag:      'Softskills',
         date:     'Abril 2026',

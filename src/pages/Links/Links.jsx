@@ -14,8 +14,8 @@ const LINKS = [
   },
   {
     id: 'devto',
-    label: 'La habiliad más infravalorada del mundo',
-    href: 'https://dev.to/marilau-tech/la-habilidad-mas-infravalorada-del-mundo-profesional-dar-y-recibir-mentoria-5dmh',
+    label: 'Ego del desarrollador: por qué regularlo te hará mejor',
+    href: 'https://dev.to/marilau-tech/ego-del-desarrollador-y-por-que-regularlo-te-hara-mejor-profesional-k2p',
   },
   {
     id: 'mentoria',

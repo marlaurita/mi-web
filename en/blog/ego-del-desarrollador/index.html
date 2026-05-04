@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var s = window.location.search;
+        if (s.slice(1, 2) === '/') {
+          var d = s.slice(1).split('&').map(function(p){ return p.replace(/~and~/g,'&'); });
+          history.replaceState(null, null, d[0] + (d[1] ? '?' + d[1] : '') + window.location.hash);
+        }
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your code can be impeccable, but if your ego is unchecked it can cost you jobs, arguments, and opportunities. Here's how to recognise it and what to do about it." />
+    <meta name="theme-color" content="#1F244A" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="article" />
+    <meta property="og:url"         content="https://marilau.tech/en/blog/ego-del-desarrollador" />
+    <meta property="og:title"       content="Developer ego and why regulating it will make you a better professional — marilau.tech" />
+    <meta property="og:description" content="Your code can be impeccable, but if your ego is unchecked it can cost you jobs, arguments, and opportunities. Here's how to recognise it and what to do about it." />
+    <meta property="og:image"       content="https://marilau.tech/og-image.png" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale"      content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:url"         content="https://marilau.tech/en/blog/ego-del-desarrollador" />
+    <meta name="twitter:title"       content="Developer ego and why regulating it will make you a better professional — marilau.tech" />
+    <meta name="twitter:description" content="Your code can be impeccable, but if your ego is unchecked it can cost you jobs, arguments, and opportunities. Here's how to recognise it and what to do about it." />
+    <meta name="twitter:image"       content="https://marilau.tech/og-image.png" />
+
+    <title>Developer ego and why regulating it will make you a better professional — marilau.tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-DnjLwckF.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DEarRGZd.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

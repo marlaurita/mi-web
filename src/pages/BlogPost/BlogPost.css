@@ -237,10 +237,79 @@
 
 .post-page__share {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.post-page__share-label {
   color: var(--color-textMuted);
   font-size: 0.82rem;
+}
+
+.post-page__share-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.post-page__share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-borderSubtle);
+  color: var(--color-textMuted);
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+  text-decoration: none;
+}
+
+.post-page__share-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.post-page__share-btn:hover {
+  transform: translateY(-2px);
+}
+
+.post-page__share-btn--linkedin:hover {
+  background: rgba(10, 102, 194, 0.15);
+  border-color: rgba(10, 102, 194, 0.4);
+  color: #0a66c2;
+}
+
+.post-page__share-btn--x:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--color-textPrimary);
+}
+
+.post-page__share-btn--whatsapp:hover {
+  background: rgba(37, 211, 102, 0.15);
+  border-color: rgba(37, 211, 102, 0.4);
+  color: #25d366;
+}
+
+.post-page__share-btn--copy {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-borderSubtle);
+  color: var(--color-textMuted);
+}
+
+.post-page__share-btn--copy:hover {
+  background: rgba(102, 230, 221, 0.12);
+  border-color: rgba(102, 230, 221, 0.35);
+  color: var(--color-accent, #66e6dd);
+}
+
+.post-page__share-btn--copied {
+  background: rgba(102, 230, 221, 0.15);
+  border-color: rgba(102, 230, 221, 0.4);
+  color: var(--color-accent, #66e6dd);
 }
 
 /* 404 not found */

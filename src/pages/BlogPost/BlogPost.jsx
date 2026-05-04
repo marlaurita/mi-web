@@ -90,6 +90,31 @@ function ShareButtons({ url, title }) {
   )
 }
 
+function CommentsInvite({ url, blog }) {
+  if (!url) return null
+  return (
+    <div className="post-page__comments">
+      <div className="post-page__comments-icon" aria-hidden>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 6.5A2.5 2.5 0 0 0 18.5 4h-13A2.5 2.5 0 0 0 3 6.5v9A2.5 2.5 0 0 0 5.5 18H7v2.5a.5.5 0 0 0 .8.4L12 18h6.5A2.5 2.5 0 0 0 21 15.5v-9z" />
+        </svg>
+      </div>
+      <div className="post-page__comments-body">
+        <p className="post-page__comments-title">{blog.commentTitle}</p>
+        <p className="post-page__comments-text">{blog.commentText}</p>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="post-page__comments-cta"
+        >
+          {blog.commentCta}
+        </a>
+      </div>
+    </div>
+  )
+}
+
 function ContentBlock({ block }) {
   switch (block.type) {
     case 'h2':
@@ -219,6 +244,9 @@ export default function BlogPost() {
                   <p className="post-page__empty-text">{blog.comingSoon}</p>
                 </div>
               )}
+
+              {/* Comentarios dev.to */}
+              <CommentsInvite url={post.devToUrl} blog={blog} />
 
               {/* Footer del post */}
               <footer className="post-page__footer">

@@ -15,7 +15,7 @@ const LINKS = [
   {
     id: 'devto',
     label: 'Ego del desarrollador: por qué regularlo te hará mejor',
-    href: 'https://dev.to/marilau-tech/ego-del-desarrollador-y-por-que-regularlo-te-hara-mejor-profesional-k2p',
+    href: 'https://marilau.tech/es/blog/ego-del-desarrollador',
   },
   {
     id: 'mentoria',

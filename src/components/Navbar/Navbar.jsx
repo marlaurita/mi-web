@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Sun, Moon } from 'lucide-react'
+import { Sun, Moon, Globe } from 'lucide-react'
 import { useLanguage } from '../../i18n/LanguageContext'
 import { useTheme } from '../../theme/ThemeContext'
 import './Navbar.css'
@@ -93,6 +93,10 @@ export default function Navbar() {
               {link.label}
             </button>
           ))}
+          <button className="navbar__mobile-lang" onClick={toggleLang} aria-label="Cambiar idioma">
+            <Globe size={15} />
+            <span className="navbar__lang-toggle">{lang === 'es' ? 'EN' : 'ES'}</span>
+          </button>
           <button className="navbar__mobile-cta" onClick={() => handleNav('contact')}>
             {nav.ctaLabel}
           </button>

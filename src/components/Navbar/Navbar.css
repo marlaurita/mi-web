@@ -176,6 +176,18 @@
   font-weight: 500;
 }
 
+.navbar__mobile-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.07);
+  color: var(--color-textSecondary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .navbar__mobile-cta {
   margin-top: 16px;
   width: 100%;

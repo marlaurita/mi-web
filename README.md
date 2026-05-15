@@ -7,6 +7,7 @@ Sitio web personal de **marilau** — hub de mentoría, blog, comunidad y contac
 - React 18 + Vite 5
 - React Router DOM 7
 - CSS puro con variables (sin librería de UI externa)
+- Lucide React (íconos)
 - Fuentes: Space Grotesk + Inter (Google Fonts)
 - Deploy: GitHub Pages via GitHub Actions
 
@@ -23,14 +24,20 @@ Sitio web personal de **marilau** — hub de mentoría, blog, comunidad y contac
 
 ```
 src/
-├── main.jsx            # Entry point con LanguageProvider
+├── main.jsx            # Entry point con ThemeProvider + LanguageProvider
 ├── App.jsx             # Router (Home + BlogPost + Links)
-├── index.css           # Estilos globales y variables CSS
-├── theme.js            # Tokens de diseño (colores, fuentes, radios)
+├── index.css           # Estilos globales, variables CSS dark/light mode
+├── theme.js            # Tokens de diseño (colors, lightColors, fuentes, radios)
+├── theme/
+│   └── ThemeContext.jsx  # Contexto de dark/light mode con persistencia en localStorage
+├── i18n/
+│   ├── LanguageContext.jsx
+│   ├── es.js
+│   └── en.js
 ├── data/
 │   └── community.js    # Actividades de comunidad (charlas, eventos, mentoría)
 ├── components/
-│   ├── Navbar/
+│   ├── Navbar/         # Incluye toggle sol/luna y toggle de idioma
 │   ├── Hero/
 │   ├── About/
 │   ├── Mentoring/
@@ -38,13 +45,9 @@ src/
 │   ├── Community/
 │   ├── Contact/
 │   └── Footer/
-├── pages/
-│   ├── BlogPost/       # Página dinámica de posts (/:lang/blog/:slug)
-│   └── Links/          # Página Linktree (/links)
-└── i18n/
-    ├── LanguageContext.jsx
-    ├── es.js
-    └── en.js
+└── pages/
+    ├── BlogPost/       # Página dinámica de posts (/:lang/blog/:slug)
+    └── Links/          # Página estilo Linktree (/links)
 scripts/
 └── optimize-images.js  # Convierte imágenes de public/community/ a WebP
 public/
@@ -75,9 +78,39 @@ npm run build   # build local
 ## Personalización
 
 - **Texto del sitio:** `src/i18n/es.js` (español) / `src/i18n/en.js` (inglés)
-- **Colores/marca:** `src/theme.js`
-- **Links de /links:** array `LINKS` y `SOCIALS` en `src/pages/Links/Links.jsx`
+- **Colores/marca:** `src/theme.js` — editar `colors` para dark mode y `lightColors` para light mode
+- **Links de /links:** arrays `LINKS` y `SOCIALS` en `src/pages/Links/Links.jsx`
 - **Formulario de contacto:** conectar a Formspree o EmailJS en `Contact.jsx`
+
+## Dark / Light mode
+
+El sitio incluye un toggle sol/luna en la barra de navegación. El tema se persiste en `localStorage` bajo la clave `ml-theme` (`'dark'` | `'light'`). El valor se aplica como atributo `data-theme` en `<html>` antes de que React renderice (script inline en `index.html`) para evitar flash de tema incorrecto.
+
+Las variables CSS del tema viven en `src/index.css`:
+
+```css
+:root { /* dark mode — valores por defecto */ }
+[data-theme="light"] { /* overrides para light mode */ }
+```
+
+Todos los valores `rgba` de acento usan `rgba(var(--accent-rgb), X)` en lugar de colores hardcodeados, lo que permite cambiar el color de acento globalmente modificando solo `--accent-rgb` en cada bloque de tema.
+
+## Accesibilidad
+
+El sitio cumple **WCAG 2.1 AA** en dark mode y light mode, verificado con axe-core:
+
+- Todos los labels de formulario están asociados a sus inputs via `htmlFor`/`id`
+- Botones con solo íconos tienen `aria-label`
+- El menú hamburger tiene `aria-expanded` dinámico
+- Jerarquía de headings correcta (h1 → h2 → h3)
+- `:focus-visible` definido globalmente con el color de acento
+- `lang="es"` en `<html>`
+
+Para correr una auditoría de accesibilidad local:
+
+```bash
+npx @axe-core/cli http://localhost:5173
+```
 
 ## Agregar actividades de comunidad
 

@@ -61,7 +61,7 @@
 
 .comm-tab--active {
   border-color: var(--color-cyan);
-  background: rgba(102, 230, 221, 0.08);
+  background: rgba(var(--accent-rgb), 0.08);
   color: var(--color-cyan);
 }
 

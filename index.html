@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <script>
+      // Aplica el tema guardado antes de que React renderice (evita flash)
+      (function() {
+        var t = localStorage.getItem('ml-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <script>
       // GitHub Pages SPA: restaura la ruta codificada por 404.html
       (function () {
         var search = window.location.search;

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Sun, Moon } from 'lucide-react'
 import { useLanguage } from '../../i18n/LanguageContext'
+import { useTheme } from '../../theme/ThemeContext'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -8,6 +10,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { lang, toggleLang, content } = useLanguage()
   const { site, nav } = content
+  const { theme, toggleTheme } = useTheme()
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -48,11 +51,28 @@ export default function Navbar() {
             </button>
           </li>
           <li>
+            <button
+              className="navbar__theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+            >
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+          </li>
+          <li>
             <button className="navbar__cta" onClick={() => handleNav('contact')}>
               {nav.ctaLabel}
             </button>
           </li>
         </ul>
+
+        <button
+          className="navbar__theme-toggle navbar__theme-toggle--mobile"
+          onClick={toggleTheme}
+          aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+        >
+          {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
 
         <button
           className={`navbar__hamburger${menuOpen ? ' navbar__hamburger--open' : ''}`}

@@ -158,10 +158,10 @@
 }
 
 .links-card--highlight {
-  border-color: rgba(102, 230, 221, 0.4);
+  border-color: rgba(var(--accent-rgb), 0.4);
   background: linear-gradient(
     135deg,
-    rgba(102, 230, 221, 0.12),
+    rgba(var(--accent-rgb), 0.12),
     rgba(154, 97, 141, 0.12)
   );
 }
@@ -169,7 +169,7 @@
 .links-card--highlight:hover {
   background: linear-gradient(
     135deg,
-    rgba(102, 230, 221, 0.22),
+    rgba(var(--accent-rgb), 0.22),
     rgba(154, 97, 141, 0.22)
   );
 }

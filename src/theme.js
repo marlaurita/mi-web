@@ -27,6 +27,21 @@ export const colors = {
   borderAccent:  'rgba(102, 230, 221, 0.40)',
 }
 
+// Colores light mode (aplicados vía [data-theme="light"] en index.css)
+export const lightColors = {
+  navy:          '#EDF0FF',
+  ocean:         '#D4DCFA',
+  textPrimary:   '#1A1F42',
+  textSecondary: '#344272',
+  textMuted:     '#546898',
+  bgCard:        'rgba(255, 255, 255, 0.70)',
+  bgCardHover:   'rgba(255, 255, 255, 0.92)',
+  bgOverlay:     'rgba(237, 240, 255, 0.95)',
+  bgGlass:       'rgba(237, 240, 255, 0.75)',
+  borderSubtle:  'rgba(26, 31, 66, 0.10)',
+  borderAccent:  'rgba(26, 31, 66, 0.25)',
+}
+
 // Variables CSS generadas a partir de los colores — NO editar manualmente
 export const cssVariables = Object.entries(colors).reduce((acc, [key, val]) => {
   acc[`--color-${key}`] = val

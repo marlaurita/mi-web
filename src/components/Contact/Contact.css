@@ -15,7 +15,7 @@
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(102, 230, 221, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.07) 0%, transparent 70%);
   filter: blur(60px);
   pointer-events: none;
 }
@@ -141,7 +141,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(102, 230, 221, 0.12);
+  background: rgba(var(--accent-rgb), 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,13 +218,13 @@
 .contact__submit {
   padding: 14px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--color-cyan), rgba(102, 230, 221, 0.8));
+  background: linear-gradient(135deg, var(--color-cyan), rgba(var(--accent-rgb), 0.8));
   color: var(--color-navy);
   font-weight: 700;
   font-size: 0.95rem;
   font-family: var(--font-heading);
   transition: opacity 0.2s, transform 0.2s;
-  box-shadow: 0 4px 20px rgba(102, 230, 221, 0.20);
+  box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.20);
 }
 
 .contact__submit:hover {

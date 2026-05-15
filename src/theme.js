@@ -14,7 +14,7 @@ export const colors = {
   // Texto
   textPrimary:   '#F0F4FF',   // Blanco suave
   textSecondary: '#A8B4CC',   // Gris azulado
-  textMuted:     '#5E6B82',   // Texto discreto
+  textMuted:     '#8CA0BA',   // Texto discreto
 
   // Fondos adicionales
   bgCard:        'rgba(24, 79, 103, 0.35)',   // Card con opacidad

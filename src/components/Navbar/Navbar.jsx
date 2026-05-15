@@ -30,7 +30,7 @@ export default function Navbar() {
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <nav className="navbar__inner">
         <button className="navbar__logo" onClick={() => handleNav('hero')}>
-          <img src="/favicon.svg" alt="logo" className="navbar__logo-icon" />
+          <img src="/favicon.svg" alt="" className="navbar__logo-icon" />
           {site.name}
         </button>
 
@@ -57,7 +57,8 @@ export default function Navbar() {
         <button
           className={`navbar__hamburger${menuOpen ? ' navbar__hamburger--open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Abrir menú"
+          aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={menuOpen}
         >
           <span className="navbar__hamburger-line" />
           <span className="navbar__hamburger-line" />

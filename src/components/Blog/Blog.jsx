@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageContext'
 import { SectionLabel } from '../About/About'
 import './Blog.css'
@@ -34,9 +34,6 @@ export default function Blog() {
               key={i}
               className={`post-card${post.content?.length ? ' post-card--linked' : ''}`}
               onClick={() => post.content?.length && navigate(`/${lang}/blog/${post.slug}`)}
-              role={post.content?.length ? 'button' : undefined}
-              tabIndex={post.content?.length ? 0 : undefined}
-              onKeyDown={(e) => e.key === 'Enter' && post.content?.length && navigate(`/${lang}/blog/${post.slug}`)}
             >
               <div className="post-card__meta">
                 <span className={`post-tag ${tagClass[post.tagKey] ?? 'post-tag--mentoring'}`}>
@@ -49,7 +46,18 @@ export default function Blog() {
               <p className="post-card__excerpt">{post.excerpt}</p>
 
               <div className="post-card__footer">
-                <span className="post-card__read-link">{blog.readArticle}</span>
+                {post.content?.length ? (
+                  <Link
+                    to={`/${lang}/blog/${post.slug}`}
+                    className="post-card__read-link"
+                    aria-label={`${blog.readArticle}: ${post.title}`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {blog.readArticle}
+                  </Link>
+                ) : (
+                  <span className="post-card__read-link">{blog.readArticle}</span>
+                )}
                 <span className="post-card__read-time">{post.readTime} {blog.readTime}</span>
               </div>
             </article>

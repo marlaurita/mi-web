@@ -87,7 +87,7 @@ export default function Contact() {
           <div className="contact__form-box">
             {sent ? (
               <div className="contact__success">
-                <div className="contact__success-icon">✓</div>
+                <div className="contact__success-icon" aria-hidden="true">✓</div>
                 <h3 className="contact__success-title">{contact.success.title}</h3>
                 <p className="contact__success-text">{contact.success.text}</p>
               </div>
@@ -95,8 +95,9 @@ export default function Contact() {
               <form className="contact__form" onSubmit={handleSubmit}>
                 <div className="form-row">
                   <div className="form-group">
-                    <label className="form-label">{contact.form.nameLabel}</label>
+                    <label htmlFor="contact-name" className="form-label">{contact.form.nameLabel}</label>
                     <input
+                      id="contact-name"
                       className="form-input"
                       name="name"
                       type="text"
@@ -107,8 +108,9 @@ export default function Contact() {
                     />
                   </div>
                   <div className="form-group">
-                    <label className="form-label">{contact.form.emailLabel}</label>
+                    <label htmlFor="contact-email" className="form-label">{contact.form.emailLabel}</label>
                     <input
+                      id="contact-email"
                       className="form-input"
                       name="email"
                       type="email"
@@ -121,8 +123,9 @@ export default function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label">{contact.form.subjectLabel}</label>
+                  <label htmlFor="contact-subject" className="form-label">{contact.form.subjectLabel}</label>
                   <input
+                    id="contact-subject"
                     className="form-input"
                     name="subject"
                     type="text"
@@ -134,8 +137,9 @@ export default function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label">{contact.form.messageLabel}</label>
+                  <label htmlFor="contact-message" className="form-label">{contact.form.messageLabel}</label>
                   <textarea
+                    id="contact-message"
                     className="form-textarea"
                     name="message"
                     placeholder={contact.form.messagePlaceholder}

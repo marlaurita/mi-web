@@ -8,6 +8,11 @@ const LINKS = [
     href: 'https://marilau.tech',
   },
   {
+    id: 'nerdearla-2026',
+    label: 'Charla Nerdearla 2026',
+    href: 'https://www.youtube.com/watch?v=67MZCLM1XZM',
+  },
+  {
     id: 'nerdearla',
     label: 'Charla Nerdearla 2025',
     href: 'https://www.youtube.com/watch?v=gwe3Xr1l_tU&list=PLTTdzfRyGY1vG5T43-_QCjTLzpRTgrBr-',

@@ -1,4 +1,5 @@
-import { ExternalLink } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 import './Links.css'
 
 const LINKS = [
@@ -11,6 +12,11 @@ const LINKS = [
     id: 'nerdearla-2026',
     label: 'Charla Nerdearla 2026',
     href: 'https://www.youtube.com/watch?v=67MZCLM1XZM',
+  },
+  {
+    id: 'nerdearla-favoritos',
+    label: 'Mis favoritos de Nerdearla 2026',
+    to: '/links/nerdearla-2026',
   },
   {
     id: 'nerdearla',
@@ -106,7 +112,12 @@ export default function Links() {
 
         {/* Link cards */}
         <div className="links-list">
-          {LINKS.map((link) => (
+          {LINKS.map((link) => link.to ? (
+            <Link key={link.id} to={link.to} className="links-card">
+              <span className="links-card-label">{link.label}</span>
+              <ArrowRight size={16} className="links-card-icon" />
+            </Link>
+          ) : (
             <a
               key={link.id}
               href={link.href}

@@ -11,6 +11,7 @@ import Contact   from './components/Contact/Contact'
 import Footer    from './components/Footer/Footer'
 import BlogPost  from './pages/BlogPost/BlogPost'
 import Links     from './pages/Links/Links'
+import NerdearlaFavorites from './pages/NerdearlaFavorites/NerdearlaFavorites'
 
 function ScrollToHash() {
   const { hash } = useLocation()
@@ -62,6 +63,7 @@ export default function App() {
         <Route path="/:lang/blog/:slug"    element={<BlogPost />} />
         <Route path="/blog/:slug"          element={<BlogPostRedirect />} />
         <Route path="/links"               element={<Links />} />
+        <Route path="/links/nerdearla-2026" element={<NerdearlaFavorites />} />
       </Routes>
     </BrowserRouter>
   )
